@@ -8,7 +8,7 @@ data "google_container_cluster" "gke_cluster" {
 }
 
 provider "google" {
-  credentials = ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+  #credentials = ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
   project     = "moonlit-ceiling-420006"
   region      = "us-central1"
 }
