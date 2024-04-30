@@ -20,7 +20,7 @@ jobs:
       # Initialize Terraform
       - name: Initialize Terraform
         run: |
-          terraform init -backend-config=backend.tfvars
+          terraform init 
 
       # Apply Terraform configuration (consider using `terraform plan` for a dry run first)
       - name: Apply Terraform configuration
