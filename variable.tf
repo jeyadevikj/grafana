@@ -10,7 +10,7 @@ variable "grafana_storage_size" {
   description = "Storage size for Grafana data (optional)"
 }
 
-variable "credentials_json" {
+variable "GCP_SERVICE_ACCOUNT_KEY" {
   type = string
 }
 
