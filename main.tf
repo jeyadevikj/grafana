@@ -8,7 +8,7 @@ data "google_container_cluster" "gke_cluster" {
 }
 
 provider "google" {
-  credentials = file("C:/Users/JeyaDeviJeevankumar/Downloads/moonlit-ceiling-420006-c25a42408e75.json")
+  credentials = ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
   project     = "moonlit-ceiling-420006"
   region      = "us-central1"
 }
