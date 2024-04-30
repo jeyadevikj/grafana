@@ -10,8 +10,5 @@ variable "grafana_storage_size" {
   description = "Storage size for Grafana data (optional)"
 }
 
-variable "GCP_SERVICE_ACCOUNT_KEY" {
-  type = string
-}
 
 # Add other variables for resource requests/limits, security context, etc.
