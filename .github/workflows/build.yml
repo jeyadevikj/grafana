@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      
       # Set up Google Cloud authentication using service account credentials
       - name: Set up Google Cloud authentication
         uses: google-github-actions/setup-gcloud@v2
@@ -25,7 +25,8 @@ jobs:
       # Apply Terraform configuration (consider using `terraform plan` for a dry run first)
       - name: Apply Terraform configuration
         run: terraform apply -auto-approve
-
+        env:
+          TF_VAR_GCP_SERVICE_ACCOUNT_KEY: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
 # Optional: Add a cleanup step to remove the deployment on workflow failure or manual cancellation
 # - name: Clean up deployment (optional)
 #   if: ${{ failure() || cancelled() }}
