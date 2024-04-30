@@ -2,7 +2,7 @@ name: Deploy Grafana
 
 on:
   push:
-    branches: [ xxx ]
+    branches: [ main ]
 
 jobs:
   deploy:
