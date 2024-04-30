@@ -8,7 +8,7 @@ data "google_container_cluster" "gke_cluster" {
 }
 
 variable "GCP_SERVICE_ACCOUNT_KEY" {
- type = map
+ type = string
 }
 provider "google" {
   credentials = var.GCP_SERVICE_ACCOUNT_KEY
