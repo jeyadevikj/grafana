@@ -7,6 +7,10 @@ data "google_container_cluster" "gke_cluster" {
   project  = "moonlit-ceiling-420006"
 }
 
+variable "GCP_SERVICE_ACCOUNT_KEY" {
+  type = string
+}
+
 provider "google" {
   credentials = jsondecode(base64decode(var.GCP_SERVICE_ACCOUNT_KEY))
   project     = "moonlit-ceiling-420006"
