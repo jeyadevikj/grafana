@@ -10,4 +10,8 @@ variable "grafana_storage_size" {
   description = "Storage size for Grafana data (optional)"
 }
 
+variable "credentials_json" {
+  type = string
+}
+
 # Add other variables for resource requests/limits, security context, etc.
