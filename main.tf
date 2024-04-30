@@ -12,7 +12,7 @@ variable "GCP_SERVICE_ACCOUNT_KEY" {
 }
 
 provider "google" {
-  credentials = jsondecode(base64decode(var.GCP_SERVICE_ACCOUNT_KEY))
+  #credentials = jsondecode(base64decode(var.GCP_SERVICE_ACCOUNT_KEY))
   project     = "moonlit-ceiling-420006"
   region      = "us-central1"
 }
